@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap');
+:root {
+    --mainColor1: #3DBE29;
+    --mainColor2: #EDC126; 
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    font-family: 'Zen Loop', cursive;
+    background-color: #CAD5E2;
+    text-transform: uppercase;
+    min-height: 100%;
+    overflow: hidden;
+}
+.container {
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+}
+.watch {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: lighter;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hourDiv, 
+.minuteDiv, 
+.secondDiv, 
+.milliSecondDiv {
+    width: 20%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.hour, 
+.minute, 
+.second, 
+.milliSecond {
+    padding: 5px;
+    background-color: var(--mainColor1);
+}
+.hourTitle, 
+.minuteTitle, 
+.secondTitle, 
+.milliSecondTitle {
+    background-color: var(--mainColor2);
+    font-size: 3rem;
+    padding: 5px;
+    font-weight: bold;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.button {
+    border: none;
+    border-radius: 10px;
+    font-size: 3rem;
+    padding: 10px;
+    width: 180px;
+    font-weight: bold;
+    font-family: 'Zen Loop', cursive;
+}
+.start {
+    margin-right: 5%;
+    color: var(--mainColor1);
+    transition: 0.5s ease-in-out;
+}
+.start:hover {
+    background-color: var(--mainColor2);
+    color: #fff;
+}
+.pause {
+    transition: 0.5s ease-in-out;
+}
+.pause:hover {
+    background-color: #E03B8B;
+    color: #fff;
+}
+.stop {
+    margin-left: 5%;
+    color: var(--mainColor2);
+    transition: 0.5s ease-in-out;
+}
+.stop:hover {
+    background-color: var(--mainColor1);
+    color: #fff;
+}
+.buttons {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+    .watch {
+        font-size: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .hourTitle, 
+    .minuteTitle, 
+    .secondTitle, 
+    .milliSecondTitle {
+        font-size: 2rem;
+    }
+    .button {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        width: 50%;
+    }
+    .start, .stop {
+        margin: 0;
+    }
+    .buttons {
+        margin-top: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 550px) {
+    .watch {
+        font-size: 2rem;
+    }
+    .hourTitle, 
+    .minuteTitle, 
+    .secondTitle, 
+    .milliSecondTitle {
+        font-size: 1.5rem;
+    }
+}
