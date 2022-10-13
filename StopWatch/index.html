@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="stopwatch.css">
+</head>
+<body>
+    <div class="container">
+        <div class="watch">
+            <div class="hourDiv">
+                <h3 class="hour">01</h3>
+                <p class="hourTitle">Hour</p>
+            </div>
+            <div class="minuteDiv">
+                <h3 class="minute">30</h3>
+                <p class="minuteTitle">Min</p>
+            </div>
+            <div class="secondDiv">
+                <h3 class="second">01</h3>
+                <p class="secondTitle">Sec</p>
+            </div>
+            <div class="milliSecondDiv">
+                <h3 class="milliSecond">99</h3>
+                <p class="milliSecondTitle">Millis</p>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="start button">Start</button>
+            <button class="pause button">Pause</button>
+            <button class="stop button">Reset</button>
+        </div>
+    </div>
+    <script src="stopwatch.js"></script>
+    <script>
+        let bodyWidth = screen.width;
+        if(bodyWidth === 250) {
+            alert("Web App Not Compatiable Choose Device Above 300 Width Otherwise UI Design Will be Messy.");
+        }
+    </script>
+</body>
+</html>
