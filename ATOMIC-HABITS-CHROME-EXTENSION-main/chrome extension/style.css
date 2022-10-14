@@ -1,0 +1,37 @@
+
+body
+{
+    height: 250px;
+    width:200px;
+    border-radius: 30%;
+    font-size:15px;
+    user-select: none;
+    border: 10px;
+    border-color: white;
+    
+}
+*{
+    background-color: rgb(34, 34, 34);
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    border: 10px;
+    border-color: white;
+}
+#displayquote
+{
+    text-align: center;
+    position: relative;
+    justify-content: center;
+    padding-top:20%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: inline-flex;
+}
+#author
+{
+    text-align: center;
+    text-align: center;
+    position: relative;
+    padding-bottom: 20%;
+}

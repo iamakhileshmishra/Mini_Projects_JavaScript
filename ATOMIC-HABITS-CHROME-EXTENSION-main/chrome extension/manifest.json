@@ -1,0 +1,14 @@
+{
+    "name" : "ATOMIC HABITS" , 
+    "version" : "0.1" , 
+    "manifest_version" : 2 , 
+    "icons":
+    {
+        "128":"icon.png"
+    } , 
+    "browser_action":
+    {
+        "default_popup":"ATOMIC HABITS.html"
+    } , 
+    "permissions":["activeTab"]
+}
