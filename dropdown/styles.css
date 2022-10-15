@@ -63,7 +63,7 @@ nav{
 .dropdown-content.hide{
     position: relative;
     height:0;
-}
+} 
 
 .dropdown-content.show{
     height:var(--openHeight);
