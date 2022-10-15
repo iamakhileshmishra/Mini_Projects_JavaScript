@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Course Page</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+       <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Navbar</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </header>
+        <main>
+                <div class="container mt-5 col-6">
+                        <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Chapter Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <button id="add_btn" class="btn btn-outline-success" type="button" id="button-addon2">Add</button>
+                              </div>
+                <ul id="parentlist" class="list-group">
+                        <li class="list-group-item d-flex justify-content-between">
+                                <h3 class="flex-grow-1">An item</h3> 
+                                <button class="btn btn-warning mx-2" onclick="editChapter(this)">Edit</button>
+                                <button class="btn btn-danger mx-2" onclick="removeChapter(this)">Remove</button>
+                      </ul>
+                </div>
+                </div>
+
+                <script>
+                        let addBtn = document.getElementById('add_btn');
+                        addBtn.addEventListener('click', addChapter);
+                        let p = document.getElementById('parentlist');
+                        function addChapter(e){
+                                if((p.children[0]).classList.contains('emptyMsg')){
+                                        p.children[0].remove();
+                                }
+                              let currentBtn = e.currentTarget;
+                              let currentInput=currentBtn.previousElementSibling
+                              console.log(currentInput.value)
+                              
+                              let newli=document.createElement('li');
+                              newli.className = "list-group-item d-flex justify-content-between";
+                              newli.innerHTML=` <h3 class="flex-grow-1">${currentInput.value}</h3> 
+                              <button class="btn btn-warning mx-2" onclick="editChapter(this)">Edit</button>
+                              <button class="btn btn-danger mx-2" onclick="removeChapter(this)">Remove</button></li>`
+
+
+                              
+                              p.appendChild(newli);
+
+
+                        }
+
+                        function removeChapter(celement){
+                               let par = celement.parentElement
+                               par.remove();
+                               if(p.children.length <=0){
+                                let emptymsg = document.createElement("h3")
+                                emptymsg.classList.add("emptyMsg")
+                                // emptymsg.classList="d-flex justify-content-center"
+                                emptymsg.textContent = "please add content"
+                                p.appendChild(emptymsg);
+                               }
+                        }
+
+                        function editChapter(currElement){
+                                if(currElement.textContent=="Done"){
+                                        currElement.textContent="Edit"
+                                        let prevsib = currElement.previousElementSibling;
+                              let currChapterName = prevsib.value;
+                              let currheading = document.createElement('h3');
+                                currheading.className= "flex-grow-1"
+                                currheading.textContent=currChapterName
+
+                                currElement.parentElement.replaceChild(currheading, currElement.previousElementSibling)
+                                }
+                                else{
+                                currElement.textContent="Done"
+                              let prevsib = currElement.previousElementSibling;
+                              let currChapterName = prevsib.textContent;
+                              let currinput = document.createElement('input');
+                              currinput.placeholder="chapter Name"
+                              currinput.className="form-control"
+                              currinput.value = currChapterName;
+
+                              currElement.parentElement.replaceChild(currinput, currElement.previousElementSibling)
+                                }
+                        }
+                </script>
+
+        </main>
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
