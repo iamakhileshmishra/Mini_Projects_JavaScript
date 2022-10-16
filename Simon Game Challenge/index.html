@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+
+<body>
+  <h1 id="heading">
+    Press A Key to Start or click
+  </h1>
+  <div class="button">Start</div>
+  <div class="container">
+    <div class="row">
+      <div type="button" id="green" class="btn"> 
+      </div>
+      <div type="button" id="red" class="btn">
+      </div>
+    </div>
+    <div class="row">
+      <div type="button" id="yellow" class="btn">
+      </div>
+      <div type="button" id="blue" class="btn">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="top">This game is designed to test your memory power.</div>
+  <ul>
+    <li>Game starts with blink one of the four square.</li>
+    <li>you have to press that square and remember also.</li>
+    <li>Your level is up and again one square blink.</li>
+    <li>Now, First you have to press all previously blinked square in order and then press the current blinked square</li>
+    <li>Your level is up if you press the square in order correctly else game over. </li>
+  </ul>
+
+    <div> Hint : In every level make sure that no of square you press must be equal to level number. </div>
+    <a href="https://en.wikipedia.org/wiki/Simon_(game)" target="blank">To know more about game click here. </a> 
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
