@@ -10,4 +10,6 @@
 5. Clear screen feature to clear the display screen anytime you want.
 
 
-##  
+##  Do you want to run this project?
+  
+  Clone the repo to your System into your code editor and run the program :)
