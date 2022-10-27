@@ -1,0 +1,27 @@
+body {
+  background-color: green;
+  text-align: center;
+  font-size: large;
+}
+h1 {
+  color: yellow;
+}
+p {
+  color: azure;
+  font-size: large;
+}
+#btn1 {
+  color: #016f32;
+  width: 150px;
+  background: goldenrod;
+  margin: 2px;
+}
+#btn2 {
+  color: #016f32;
+  width: 150px;
+  background: goldenrod;
+  margin: 2px;
+}
+/* button:hover{
+    border-color: blue;
+} */
