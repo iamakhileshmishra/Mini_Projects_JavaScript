@@ -1,0 +1,3 @@
+This MiniProject is on a very basic login module that is found on most of the websites.
+To make it easy to understand the flow... heavy css is not used.
+Basic functionalities are like register form for new users and registered email validation registered user login etc... 

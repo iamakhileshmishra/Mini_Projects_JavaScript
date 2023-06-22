@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <datalist id="cnt">
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="Russia">Russia</option>
+        <option value="China">China</option>
+        <option value="France">France</option>
+    </datalist>
+    <form id="register-form">
+        <fieldset style="width: 20%;margin: auto;margin-top: 10%;">
+            <legend>Register Form</legend>
+            <label for="name">Name</label><br>
+            <input type="text" id="name"><br>
+            <label for="email">Email</label><br>
+            <input type="email" id="email"><br>
+            <label for="contact">Contact</label><br>
+            <input type="text" id="contact"><br>
+            <label for="name">Country</label><br>
+            <input list="cnt" id="country"><br>
+            <label for="pincode">Pincode</label><br>
+            <input type="text" id="pincode"><br>
+            <label for="password">Password</label><br>
+            <input type="password" id="password"><br><br>
+            <input type="submit" value="Register">
+            <input type="reset" value="reset">
+        </fieldset>
+    </form>
+    <script src="register.js"></script>
+</body>
+
+</html>
